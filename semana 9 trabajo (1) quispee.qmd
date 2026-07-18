@@ -1,0 +1,211 @@
+---
+title: "semana 9 casos 
+author: "quispe quispe tania"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#DATOS
+x<-c(2,4,6,8,10)
+y<-c(65,70,75,82,88)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte positiva entre ambas variables
+
+#Cuando recibe una capacitaciòn de 12 horas de duraciòn
+predict(modelo,data.frame(x=12))
+
+#gràfico
+plot(x,y,main = "Horas de capacitación vs Calidad de atención",
+     xlab="Horas de Capacitación",
+     ylab="Puntaje de Calidad",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+caso 2
+
+```{r}
+#DATOS
+x<-c(1,2,3,4,5)
+y<-c(60,68,75,82,90)
+```
+
+You can add options to executable code like this
+
+```{r}
+#Correlación de pearsson
+cor(x,y)
+
+```
+
+```{r}
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+
+```
+
+```{r}
+#Hay una correlación fuerte positiva entre ambas variables
+
+#Cuando recibe un tiempo de cuidado de 6 horas de duración
+predict(modelo,data.frame(x=6))
+
+```
+
+```{r}
+#gráfico
+plot(x,y,main = "Horas de cuidado vs Calidad de paciente",
+     xlab="Horas de Cuidado",
+     ylab="Puntaje de paciente",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+caso 3
+
+```{r}
+#DATOS
+x<-c(4,6,8,10,12)
+y<-c(2,3,4,5,7)
+
+```
+
+```{r}
+
+#Correlación de pearsson
+cor(x,y)
+```
+
+```{r}
+
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+
+```
+
+```{r}
+#Hay una correlación fuerte positiva entre ambas variables
+
+#Cuando recibe numero de paciente de 14 de duración
+predict(modelo,data.frame(x=14))
+```
+
+```{r}
+#gráfico
+plot(x,y,main = "número de pacientes vs tiempo de respuesta",
+     xlab="número de paciente",
+     ylab="tiempo de respuesta",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+caso 4
+
+```{r}
+#DATOS
+x<-c(1.0,1.5,2.0,2.5,3.0)
+y<-c(145,142,138,134,130)
+
+```
+
+```{r}
+
+#Correlación de pearsson
+cor(x,y)
+```
+
+```{r}
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+
+```
+
+```{r}
+#Hay una correlación fuerte negativa entre ambas variables
+
+#Cuando recibe consumo de agua  de 3.5 de litros
+predict(modelo,data.frame(x=3.5))
+
+```
+
+```{r}
+#gráfico
+plot(x,y,main = "consumo de agua  vs presión arterial",
+     xlab="consumo de agua",
+     ylab="Presión arterial",
+     pch=19)
+
+abline(modelo,lwd=2)
+
+```
+
+caso 5
+
+```{r}
+
+#DATOS
+x<-c(50,60,70,80,90)
+y<-c(190,175,165,150,135)
+
+```
+
+```{r}
+#Correlación de pearsson
+cor(x,y)
+```
+
+```{r}
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+
+```
+
+```{r}
+#Hay una correlación fuerte negativa entre ambas variables
+
+#Cuando recibe adherencia al tratamiento del 95%
+predict(modelo,data.frame(x=95))
+```
+
+```{r}
+#gráfico
+plot(x,y,main = "adherencia vs glucosa",
+     xlab="adherencia",
+     ylab="glucosa",
+     pch=19)
+
+abline(modelo,lwd=2)
+
+```
+
+```{r}
+
+```
