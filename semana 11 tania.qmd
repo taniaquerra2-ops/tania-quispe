@@ -1,0 +1,93 @@
+---
+title: "semana 11"
+author: "Tania Quispe Quispe"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+ejercicio 1
+
+```{r}
+# COEFICIENTE BETA
+beta <- 0.405
+
+# Cálculo del Hazard Ratio
+HR <- exp(beta)
+
+# Mostrar resultado
+HR
+
+# Interpretación
+cat("Hazard ratio =", round(HR,3), "\n")
+cat("El riesgo aumenta en", round((HR-1)*100,1), "% respecto al grupo de control.")
+```
+
+ejercicio 2
+
+```{r}
+# Hazard Ratio reportado
+HR <- 0.75
+
+# Reducción porcentual del riesgo
+reduccion <- (1-HR)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Reducción del riesgo =", reduccion, "%\n")
+```
+
+ejercicio 3
+
+```{r}
+# Hazard Ratio reportado
+HR <- 1.35
+
+# Incremento porcentual del riesgo
+incremento <- (HR-1)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Incremento del riesgo =", incremento, "%\n")
+
+```
+
+ejercicio 4
+
+```{r}
+# COEFICIENTE BETA
+beta <- -1.20
+
+# Cálculo del Hazard Ratio
+HR <- exp(beta)
+
+# Mostrar resultado
+HR
+
+# Interpretación
+cat("Hazard ratio =", round(HR,3), "\n")
+cat("El programa reduce el riesgo en", round((1-HR)*100,1), "% respecto al grupo de control.")
+
+```
+
+ejercicio 5
+
+```{r}
+# Hazard Ratio reportado
+HR <- 2.10
+
+# Incremento porcentual del riesgo
+incremento <- (HR-1)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Incremento del riesgo =", incremento, "%\n")
+
+```
