@@ -1,0 +1,62 @@
+---
+title: "semana 8"
+author: "tania quispe Q,"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#DATOS
+x<-c(50,60,70,80,90)
+y<-c(190,175,165,150,135)
+
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#Correlación de pearsson
+cor(x,y)
+
+```
+
+```{r}
+
+#Correlación de pearsson
+cor(x,y)
+
+```
+
+```{r}
+#Obtener coeficientes de la regresión
+#Modelo
+modelo <- lm(y ~ x)
+coef(modelo)
+```
+
+```{r}
+#Hay una correlación fuerte negativa entre ambas variables
+
+#Cuando recibe una capacitacion de  95 de duración
+predict(modelo,data.frame(x=95))
+
+```
+
+```{r}
+#gráfico
+plot(x,y,main = "Horas de capacitación vs Calidad de atención",
+     xlab="Horas de Capacitación",
+     ylab="Puntaje de Calidad",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
